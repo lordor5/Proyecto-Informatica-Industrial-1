@@ -1,0 +1,5 @@
+SI llueve no riega
+Regar en función de la hora
+Imagen que enseñe el estado
+
+menu
