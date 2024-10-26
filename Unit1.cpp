@@ -35,3 +35,20 @@ Label2->Visible = 1;
 }
 }
 //---------------------------------------------------------------------------
+bool sistemaInicado = false;
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+if (sistemaInicado) {
+    sistemaInicado = false;
+	Button1->Caption = "Inicializar sistema";
+}
+else {
+	sistemaInicado = true;
+	Button1->Caption = "Parar sistema";
+}
+
+}
+//---------------------------------------------------------------------------
+
+
+

@@ -37,6 +37,7 @@ __published:	// IDE-managed Components
 	TLabel *Label8;
 	TLabel *Label9;
 	void __fastcall RadioGroup1Click(TObject *Sender);
+	void __fastcall Button1Click(TObject *Sender);
 
 
 

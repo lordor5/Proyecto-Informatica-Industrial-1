@@ -19,7 +19,7 @@ object Form1: TForm1
     Shape = stRoundRect
   end
   object Shape3: TShape
-    Left = 632
+    Left = 640
     Top = 299
     Width = 345
     Height = 497
@@ -63,7 +63,7 @@ object Form1: TForm1
   end
   object Label2: TLabel
     Left = 672
-    Top = 480
+    Top = 450
     Width = 74
     Height = 15
     Caption = 'Flujo Deseado'
@@ -127,7 +127,7 @@ object Form1: TForm1
     Left = 456
     Top = 738
     Width = 34
-    Height = 23
+    Height = 15
     Caption = 'Label7'
   end
   object Label9: TLabel
@@ -145,11 +145,12 @@ object Form1: TForm1
   end
   object Button1: TButton
     Left = 32
-    Top = 24
+    Top = 25
     Width = 161
     Height = 33
     Caption = 'Inicializar sistema'
     TabOrder = 0
+    OnClick = Button1Click
   end
   object ProgressBar1: TProgressBar
     Left = 72
@@ -175,8 +176,8 @@ object Form1: TForm1
   end
   object ScrollBar1: TScrollBar
     Left = 672
-    Top = 533
-    Width = 281
+    Top = 487
+    Width = 289
     Height = 20
     PageSize = 0
     TabOrder = 3
@@ -192,8 +193,8 @@ object Form1: TForm1
     Visible = False
   end
   object Edit1: TEdit
-    Left = 1072
-    Top = 106
+    Left = 768
+    Top = 447
     Width = 193
     Height = 23
     TabOrder = 5
