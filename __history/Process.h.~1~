@@ -1,0 +1,11 @@
+//- Process.h ---------------------------------------------------------
+#ifndef processH
+#define processH
+// Para dar mayor claridad al programa
+enum {SENSOR_ON, SENSOR_OFF};
+//Función para inicializar la tarjeta
+void process_init(void);
+// Función para leer el estado en que se encuentra el sensor digital
+int process_read_sensor(void);
+#endif
+//---------------------------------------------------------------------

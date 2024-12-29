@@ -2,48 +2,49 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 831
-  ClientWidth = 1422
+  ClientHeight = 576
+  ClientWidth = 827
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Menu = Menu
   TextHeight = 15
   object Shape1: TShape
     Left = 32
     Top = 72
-    Width = 257
-    Height = 724
-    Shape = stRoundRect
-  end
-  object Shape3: TShape
-    Left = 640
-    Top = 299
-    Width = 345
+    Width = 177
     Height = 497
     Shape = stRoundRect
   end
+  object Shape3: TShape
+    Left = 424
+    Top = 147
+    Width = 345
+    Height = 358
+    Shape = stRoundRect
+  end
   object Shape5: TShape
-    Left = 848
-    Top = 48
+    Left = 760
+    Top = 33
     Width = 41
     Height = 41
     Brush.Color = clRed
     Shape = stCircle
   end
   object Shape6: TShape
-    Left = 848
-    Top = 112
+    Left = 760
+    Top = 80
     Width = 41
     Height = 41
     Brush.Color = clRed
     Shape = stCircle
   end
   object Label1: TLabel
-    Left = 712
-    Top = 328
+    Left = 504
+    Top = 163
     Width = 187
     Height = 41
     Caption = 'Modo Manual'
@@ -55,18 +56,12 @@ object Form1: TForm1
     ParentFont = False
     Visible = False
   end
-  object Image1: TImage
-    Left = 672
-    Top = 588
-    Width = 281
-    Height = 181
-  end
   object Label2: TLabel
-    Left = 672
-    Top = 450
-    Width = 74
+    Left = 440
+    Top = 298
+    Width = 142
     Height = 15
-    Caption = 'Flujo Deseado'
+    Caption = 'Flujo de la bomba deseado'
     Visible = False
   end
   object Label3: TLabel
@@ -78,17 +73,17 @@ object Form1: TForm1
   end
   object Label4: TLabel
     Left = 111
-    Top = 746
+    Top = 538
     Width = 16
     Height = 15
     Caption = '0%'
   end
   object Label5: TLabel
     Left = 48
-    Top = 112
-    Width = 230
-    Height = 32
-    Caption = 'Humedad del terreno'
+    Top = 92
+    Width = 118
+    Height = 64
+    Caption = 'Humedad '#13#10'del terreno'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 32
@@ -97,15 +92,15 @@ object Form1: TForm1
     ParentFont = False
   end
   object Shape4: TShape
-    Left = 336
+    Left = 233
     Top = 72
-    Width = 257
-    Height = 724
+    Width = 168
+    Height = 497
     Shape = stRoundRect
   end
   object Label6: TLabel
-    Left = 157
-    Top = 464
+    Left = 111
+    Top = 350
     Width = 36
     Height = 20
     Caption = '100%'
@@ -117,31 +112,66 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label7: TLabel
-    Left = 456
-    Top = 168
-    Width = 34
+    Left = 312
+    Top = 184
+    Width = 47
     Height = 15
-    Caption = 'Label7'
+    Caption = '10 L/min'
   end
   object Label8: TLabel
-    Left = 456
-    Top = 738
+    Left = 296
+    Top = 354
     Width = 34
     Height = 15
     Caption = 'Label7'
   end
   object Label9: TLabel
-    Left = 368
-    Top = 450
-    Width = 34
+    Left = 312
+    Top = 538
+    Width = 41
     Height = 15
-    Caption = 'Label7'
+    Caption = '0 L/min'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 646
+    Top = 43
+    Width = 92
+    Height = 15
+    Caption = 'Deposito de agua'
+  end
+  object Label11: TLabel
+    Left = 701
+    Top = 92
+    Width = 37
+    Height = 15
+    Caption = 'V'#225'lvula'
+  end
+  object Label12: TLabel
+    Left = 252
+    Top = 92
+    Width = 107
+    Height = 64
+    Caption = 'Caudal de'#13#10'la bomba'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 32
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label13: TLabel
+    Left = 635
+    Top = 288
+    Width = 121
+    Height = 30
+    Caption = 'El valor tiene que estar '#13#10'entre 0 y 10 L/min'
+    Visible = False
   end
   object Button1: TButton
     Left = 32
@@ -156,14 +186,14 @@ object Form1: TForm1
     Left = 72
     Top = 184
     Width = 33
-    Height = 577
+    Height = 369
     Orientation = pbVertical
     Position = 60
     TabOrder = 1
   end
   object RadioGroup1: TRadioGroup
-    Left = 744
-    Top = 184
+    Left = 424
+    Top = 23
     Width = 185
     Height = 66
     Caption = 'Modo de funcionamiento'
@@ -174,43 +204,55 @@ object Form1: TForm1
     TabOrder = 2
     OnClick = RadioGroup1Click
   end
-  object ScrollBar1: TScrollBar
-    Left = 672
-    Top = 487
-    Width = 289
-    Height = 20
-    PageSize = 0
-    TabOrder = 3
-    Visible = False
-  end
   object CheckBox1: TCheckBox
-    Left = 672
-    Top = 389
+    Left = 504
+    Top = 229
     Width = 145
     Height = 28
     Caption = 'Abrir v'#225'vula'
-    TabOrder = 4
+    TabOrder = 3
     Visible = False
+    OnClick = CheckBox1Click
   end
   object Edit1: TEdit
-    Left = 768
-    Top = 447
-    Width = 193
+    Left = 588
+    Top = 295
+    Width = 25
     Height = 23
-    TabOrder = 5
-    Text = 'Edit1'
+    MaxLength = 2
+    NumbersOnly = True
+    ParentShowHint = False
+    CanUndoSelText = True
+    ShowHint = True
+    TabOrder = 4
+    TextHint = '5'
+    OnChange = Edit1Change
   end
   object ProgressBar2: TProgressBar
-    Left = 417
-    Top = 168
+    Left = 257
+    Top = 184
     Width = 33
-    Height = 585
+    Height = 369
+    Max = 10
     Orientation = pbVertical
-    Position = 30
-    TabOrder = 6
+    Position = 1
+    TabOrder = 5
   end
   object Timer1: TTimer
-    Left = 1008
-    Top = 48
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 320
+    Top = 16
+  end
+  object Menu: TMainMenu
+    Left = 256
+    Top = 16
+    object Abrirtesting1: TMenuItem
+      Caption = 'Abrir testing'
+      object Abrirtesting2: TMenuItem
+        Caption = 'Cerrar aplicacion'
+      end
+    end
   end
 end

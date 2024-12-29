@@ -1,12 +1,6 @@
 ﻿[Shape6]
 Coordinates=301,146,59,36
 
-[ScrollBar1]
-Coordinates=217,146,74,36
-
-[Image1]
-Coordinates=10,10,57,58
-
 [Shape1]
 Coordinates=148,146,59,36
 
@@ -26,9 +20,6 @@ Coordinates=77,10,44,58
 [Button1]
 Coordinates=131,10,59,58
 
-[Timer1]
-Coordinates=317,269,55,36
-
 [Label2]
 Coordinates=237,78,53,58
 
@@ -42,5 +33,8 @@ Coordinates=10,78,114,58
 Coordinates=200,10,53,58
 
 []
-Coordinates=336,166,91,36
+Coordinates=217,146,74,36
+
+[Timer1]
+Coordinates=317,269,55,36
 

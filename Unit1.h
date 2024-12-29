@@ -9,6 +9,7 @@
 #include <Vcl.Forms.hpp>
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
+#include <Vcl.Menus.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -21,9 +22,7 @@ __published:	// IDE-managed Components
 	TShape *Shape6;
 	TTimer *Timer1;
 	TRadioGroup *RadioGroup1;
-	TScrollBar *ScrollBar1;
 	TLabel *Label1;
-	TImage *Image1;
 	TCheckBox *CheckBox1;
 	TLabel *Label2;
 	TEdit *Edit1;
@@ -36,8 +35,19 @@ __published:	// IDE-managed Components
 	TLabel *Label7;
 	TLabel *Label8;
 	TLabel *Label9;
+	TMainMenu *Menu;
+	TMenuItem *Abrirtesting1;
+	TMenuItem *Abrirtesting2;
+	TLabel *Label10;
+	TLabel *Label11;
+	TLabel *Label12;
+	TLabel *Label13;
 	void __fastcall RadioGroup1Click(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall Timer1Timer(TObject *Sender);
+	void __fastcall CheckBox1Click(TObject *Sender);
+	void __fastcall Edit1Change(TObject *Sender);
+
 
 
 
