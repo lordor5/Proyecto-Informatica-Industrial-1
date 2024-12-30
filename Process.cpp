@@ -93,8 +93,12 @@ double process_read_humidity(void) {
 
 	//Convert volts to %
 	humudity = voltage * 20.0;
-
-	return(humudity);
+	if (humudity >= 0 && humudity <= 100) {
+		 return(humudity);
+	} else if (humudity > 100) {
+		return 100;
+	}
+	return 0;
 }
 // write led actuator ------------------------------------------------
 //0->on, 1->off

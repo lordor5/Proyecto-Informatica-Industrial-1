@@ -12,6 +12,8 @@ TForm1 *Form1;
 
 double CaudalBomba = 0;
 bool Control = AUTOMATICO;
+bool Valvula = VALVULA_OFF;
+
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
@@ -52,25 +54,64 @@ else {
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Timer1Timer(TObject *Sender)
 {
+
+	//Leer la humedad del terreno y mostrarla
 	ProgressBar1->Position = process_read_humidity();
 	Label6->Caption = process_read_humidity();
 
+	//Leer el tanque de agua
 	if (process_read_water_tank())
 		Shape5->Brush->Color = clRed;
 	else
 		Shape5->Brush->Color = clGreen;
 
-	ProgressBar2->Position = CaudalBomba;
-	Label8->Caption = CaudalBomba;
-	if (process_read_humidity()<40) {
-		process_analogOutput(10);
-		process_write_valve(VALVULA_ON);
-	}
-	else if (process_read_humidity()>70) {
-			process_analogOutput(0);
-			process_write_valve(VALVULA_OFF);
-		 }
 
+	//Si hay poca agua, apagar la bomba y cerrar la valvula
+	if (process_read_water_tank() == LOW_WATER) {
+		CaudalBomba = 0;
+		ProgressBar2->Position = CaudalBomba;
+		Label8->Caption = CaudalBomba;
+		process_analogOutput(CaudalBomba);
+
+		Valvula = VALVULA_OFF;
+		process_write_valve(Valvula);
+		return ;
+	}
+
+
+	if (CaudalBomba <= 10 && CaudalBomba >= 0) {
+		ProgressBar2->Position = CaudalBomba;
+		Label8->Caption = CaudalBomba;
+	}
+
+
+	//ENCENDER el control Automatico del riego
+	if (process_read_humidity() < 40) {
+		Valvula = VALVULA_ON;
+		process_write_valve(Valvula);
+		Label8->Caption = 10;
+		ProgressBar2->Position = 10;
+
+	}
+	//APAGAR el control Automatico del riego
+	else if (process_read_humidity() > 70) {
+			//process_analogOutput(CaudalBomba);
+			//ProgressBar2->Position = CaudalBomba;
+			Valvula = VALVULA_OFF;
+			process_write_valve(Valvula);
+	}
+
+	if (Valvula)  {
+		Shape6->Brush->Color = clRed;
+		CaudalBomba = 0;
+	}
+	else {
+		Shape6->Brush->Color = clGreen;
+		// Algoritmo PID
+		CaudalBomba = -0.3*process_read_humidity()+22;
+		process_analogOutput(CaudalBomba);
+
+	}
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::CheckBox1Click(TObject *Sender)
