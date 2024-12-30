@@ -11,6 +11,10 @@
 TForm1 *Form1;
 
 double CaudalBomba = 0;
+<<<<<<< HEAD
+=======
+bool Control = Automatico;
+>>>>>>> 51a5dad62957c52457a884e2cabe2abaf12da1b3
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
@@ -23,10 +27,18 @@ void __fastcall TForm1::RadioGroup1Click(TObject *Sender)
 		CheckBox1->Visible = 0;
 		Label1->Visible = 0;
 		Label2->Visible = 0;
+<<<<<<< HEAD
+=======
+        Control = Automatico;
+>>>>>>> 51a5dad62957c52457a884e2cabe2abaf12da1b3
 	} else {
 		CheckBox1->Visible = 1;
 		Label1->Visible = 1;
 		Label2->Visible = 1;
+<<<<<<< HEAD
+=======
+		Control = Manual;
+>>>>>>> 51a5dad62957c52457a884e2cabe2abaf12da1b3
 	}
 }
 //---------------------------------------------------------------------------
@@ -59,6 +71,11 @@ void __fastcall TForm1::Timer1Timer(TObject *Sender)
 
 	ProgressBar2->Position = CaudalBomba;
 	Label8->Caption = CaudalBomba;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 51a5dad62957c52457a884e2cabe2abaf12da1b3
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::CheckBox1Click(TObject *Sender)
@@ -92,3 +109,7 @@ void __fastcall TForm1::Edit1Change(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 51a5dad62957c52457a884e2cabe2abaf12da1b3
