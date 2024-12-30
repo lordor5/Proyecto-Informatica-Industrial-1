@@ -10,6 +10,8 @@
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 #include <Vcl.Menus.hpp>
+
+enum {MANUAL, AUTOMATICO};
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {

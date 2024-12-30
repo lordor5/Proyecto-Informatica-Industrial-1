@@ -11,6 +11,7 @@
 TForm1 *Form1;
 
 double CaudalBomba = 0;
+bool Control = AUTOMATICO;
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
@@ -23,10 +24,12 @@ void __fastcall TForm1::RadioGroup1Click(TObject *Sender)
 		CheckBox1->Visible = 0;
 		Label1->Visible = 0;
 		Label2->Visible = 0;
+		Control = AUTOMATICO;
 	} else {
 		CheckBox1->Visible = 1;
 		Label1->Visible = 1;
 		Label2->Visible = 1;
+        Control = MANUAL;
 	}
 }
 //---------------------------------------------------------------------------
