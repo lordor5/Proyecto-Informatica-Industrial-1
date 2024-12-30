@@ -62,6 +62,15 @@ void __fastcall TForm1::Timer1Timer(TObject *Sender)
 
 	ProgressBar2->Position = CaudalBomba;
 	Label8->Caption = CaudalBomba;
+	if (process_read_humidity()<40) {
+		process_analogOutput(10);
+		process_write_valve(VALVULA_ON);
+	}
+	else if (process_read_humidity()>70) {
+			process_analogOutput(0);
+			process_write_valve(VALVULA_OFF);
+		 }
+
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::CheckBox1Click(TObject *Sender)
