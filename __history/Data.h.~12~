@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#ifndef DataH
+#define DataH
+//---------------------------------------------------------------------------
+#endif
+#include "Process.h"
+
+enum {MANUAL, AUTOMATICO};
+int CaudalBomba();
+
+UnicodeString ObtenerLaHora(void);
+
+int LeerHumedad(void);
+
+TStatusValve ControlarValvula(void);

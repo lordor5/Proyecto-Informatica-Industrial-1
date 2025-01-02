@@ -4,9 +4,9 @@
 #pragma hdrstop
 #include <tchar.h>
 //---------------------------------------------------------------------------
-USEFORM("SimSeny\SimSeny\ss_visual_niusb6008.cpp", F_niusb6008);
-USEFORM("Unit1.cpp", Form1);
+USEFORM("Interfaz.cpp", Form1);
 USEFORM("SimSeny\SimSeny\ss_visual_signal.cpp", F_signaled);
+USEFORM("SimSeny\SimSeny\ss_visual_niusb6008.cpp", F_niusb6008);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {

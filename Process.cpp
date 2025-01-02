@@ -82,29 +82,20 @@ void process_init(void) {
 		process_error(daq_error,"Error en process_init()->Digital Output 2");
 }
 // read humidity sensor -----------------------------------------------
-double process_read_humidity(void) {
+double process_read_humidity_sensor(void) {
 	int32 daq_error;
 	float64 voltage;
-	double humudity;
 	// Read volts from temperature analog sensor
 	daq_error = DAQmxReadAnalogScalarF64(humidity_sensor_task, 1.0, &voltage, NULL);
 	if (daq_error != 0)
 		process_error(daq_error,"Error en process_read_temperature()");
-
-	//Convert volts to %
-	humudity = voltage * 20.0;
-	if (humudity >= 0 && humudity <= 100) {
-		 return(humudity);
-	} else if (humudity > 100) {
-		return 100;
-	}
-	return 0;
+	return voltage;
 }
 // write led actuator ------------------------------------------------
 //0->on, 1->off
-void process_write_valve(int state) {
+void process_write_valve_actuator(TStatusValve state) {
 	int32 daq_error;
-	if (state == VALVULA_ON) {
+	if (state == VALVE_ON) {
 		// Encender Led poniendo el bit P1.0 a valor "0"
 		ultima_salida_digital = ultima_salida_digital & ~0x01;
 	} else {
@@ -117,7 +108,7 @@ void process_write_valve(int state) {
 }
 
 // read water and return state ------------------------------------
-int process_read_water_tank(void) {
+TStatusTank process_read_tank_sensor(void) {
 	int32 daq_error;
 	uInt32 data_read;
 	// task is started automatically, it is not necessary to start one
@@ -129,19 +120,27 @@ int process_read_water_tank(void) {
 
 	// DAQmxStopTask() optional
 
-	if ((data_read & 0x01) == 0) { //digital sensor at bit 0
-		return(HIGH_WATER);
-	} else {
-		return(LOW_WATER);
- }
+	if ((data_read & 0x01) == 0) //digital sensor at bit 0
+		return(TANK_OK);
+	 else
+		return(TANK_LOW);
 }
 //--------------------------------------------------------------------
 
 // Función para escribir en la salida analógica AO0 el voltaje especificado
-void process_analogOutput(double out_volts) {
+void process_write_pump_flow_actuator(double flow)
+{
+    double volts = flow / 2 ;//Q = k · volts -> k = 2;
+
+	if (volts > 5)
+		volts = 5;
+	else if (volts < 0)
+		volts = 0;
+
 	int32 daq_error;
 	// Escribimos el voltaje especificado en la salida analógica AO0
-	daq_error = DAQmxWriteAnalogScalarF64(analog_output_task, TRUE, 0, out_volts, NULL);
+	daq_error = DAQmxWriteAnalogScalarF64(analog_output_task, TRUE, 0, volts, NULL);
 	if (daq_error != 0)
 		process_error(daq_error,"Error en process_init()->process_analogOutput()");
 }
+
