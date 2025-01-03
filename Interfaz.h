@@ -11,6 +11,7 @@
 #include <Vcl.ComCtrls.hpp>
 #include <Vcl.Menus.hpp>
 #include <Vcl.WinXPickers.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
 
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
@@ -35,7 +36,6 @@ class TForm1 : public TForm
     TLabel* Label6;
     TProgressBar* ProgressBar2;
     TLabel* Label7;
-    TLabel* Label8;
     TLabel* Label9;
     TLabel* Label10;
     TLabel* Label11;
@@ -46,12 +46,23 @@ class TForm1 : public TForm
     TTimePicker* TimePicker1;
     TLabel* Label16;
     TCheckBox* CheckBox2;
+	TButton *Button2;
+	TLabel *Lalbel7;
+	TLabel *Label17;
+	TLabel *Label18;
+	TEdit *Edit2;
+	TEdit *Edit3;
+	TImage *Image1;
     void __fastcall RadioGroup1Click(TObject* Sender);
     void __fastcall Button1Click(TObject* Sender);
     void __fastcall Timer1Timer(TObject* Sender);
     void __fastcall CheckBox1Click(TObject* Sender);
     void __fastcall CheckBox2Click(TObject* Sender);
     void __fastcall Edit1Change(TObject* Sender);
+	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall Edit2Change(TObject *Sender);
+	void __fastcall Edit3Change(TObject *Sender);
+	void __fastcall TimePicker1Change(TObject *Sender);
   private: // User declarations
   public: // User declarations
     __fastcall TForm1(TComponent* Owner);
