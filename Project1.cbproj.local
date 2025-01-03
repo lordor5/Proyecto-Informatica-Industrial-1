@@ -25,15 +25,15 @@
     <Transaction>2024/12/29 13:00:13.000.614,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Testing.h=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit2.h</Transaction>
     <Transaction>2024/12/29 13:00:13.000.614,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Testing.cpp=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit2.cpp</Transaction>
     <Transaction>2024/12/29 17:34:59.000.206,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Testing.cpp=</Transaction>
-    <Transaction>2025/01/02 21:04:45.070,=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit2.cpp</Transaction>
-    <Transaction>2025/01/02 21:04:58.382,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Data.cpp=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit2.cpp</Transaction>
-    <Transaction>2025/01/02 21:04:58.382,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Data.h=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit2.h</Transaction>
-    <Transaction>2025/01/02 21:05:28.898,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Interfaz.dfm=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.dfm</Transaction>
-    <Transaction>2025/01/02 21:05:28.898,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Interfaz.h=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.h</Transaction>
-    <Transaction>2025/01/02 21:05:28.898,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Interfaz.cpp=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.cpp</Transaction>
-    <Transaction>2025/01/02 21:05:51.316,=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.cpp</Transaction>
-    <Transaction>2025/01/02 21:06:04.157,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Principal.cpp=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.cpp</Transaction>
-    <Transaction>2025/01/02 21:06:04.157,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Principal.h=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.h</Transaction>
+    <Transaction>2025/01/02 21:04:45.000.070,=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit2.cpp</Transaction>
+    <Transaction>2025/01/02 21:04:58.000.382,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Data.cpp=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit2.cpp</Transaction>
+    <Transaction>2025/01/02 21:04:58.000.382,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Data.h=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit2.h</Transaction>
+    <Transaction>2025/01/02 21:05:28.000.898,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Interfaz.h=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.h</Transaction>
+    <Transaction>2025/01/02 21:05:28.000.898,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Interfaz.dfm=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.dfm</Transaction>
+    <Transaction>2025/01/02 21:05:28.000.898,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Interfaz.cpp=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.cpp</Transaction>
+    <Transaction>2025/01/02 21:05:51.000.316,=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.cpp</Transaction>
+    <Transaction>2025/01/02 21:06:04.000.157,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Principal.cpp=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.cpp</Transaction>
+    <Transaction>2025/01/02 21:06:04.000.157,C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Principal.h=C:\Users\hugob\Documentos\Github\Proyecto-Informatica-Industrial-1\Unit1.h</Transaction>
   </Transactions>
 	<BT_BuildType>Debug</BT_BuildType>
 </BorlandProject>

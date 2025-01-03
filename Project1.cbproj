@@ -240,9 +240,9 @@
             <DependentOn>SimSeny\SimSeny\ss_visual_signal.h</DependentOn>
             <BuildOrder>9</BuildOrder>
         </CppCompile>
-        <FormResources Include="Interfaz.dfm"/>
         <FormResources Include="SimSeny\SimSeny\ss_visual_signal.dfm"/>
         <FormResources Include="SimSeny\SimSeny\ss_visual_niusb6008.dfm"/>
+        <FormResources Include="Interfaz.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
